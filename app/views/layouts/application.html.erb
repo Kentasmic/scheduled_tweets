@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>GoRailsBeg</title>
+    <title>Scheduled Tweets</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <!--  Adding Bootstrap CSS fro CDN -->
+    <!--  Adding Bootstrap CSS from CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <!-- End of Bootstrap -->
     
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application', media: 'all' %>
+    
   </head>
 
   <body>
     
     <%= render partial: "shared/navbar" %>
-    
+    <%= render partial: "shared/flash" %>
     <div class="container">
+      
       <%= yield %>
+      
     </div>
-    <!--  Adding Bootstrap CSS fro CDN -->
+    
+    <!--  Adding Bootstrap CSS from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
      <!-- End of Bootstrap -->
   </body>
